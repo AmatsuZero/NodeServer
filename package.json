@@ -4,7 +4,7 @@
   "description": "A Node.js Demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node_modules/.bin/_mocha -u tdd -R spec ./qa/tests-crosspage.js 2>/dev/null",
     "start": "node index.js"
   },
   "author": "",
@@ -12,5 +12,14 @@
   "dependencies": {
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-cafe-mocha": "^0.1.13",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-exec": "^1.0.1",
+    "mocha": "^3.2.0",
+    "zombie": "^5.0.5"
   }
 }
